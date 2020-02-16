@@ -70,6 +70,7 @@ router.post("/", (req, res) => {
 
 //update member
 router.put("/:id", (req, res) => {
+  console.log("madness id::", req.params.id);
   models.User.findByPk(req.params.id)
     .then(result => {
       if (result) {
